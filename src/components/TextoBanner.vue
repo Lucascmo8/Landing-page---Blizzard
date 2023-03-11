@@ -26,6 +26,7 @@
         flex-direction: column;
         grid-row: 1/3;
         grid-column:2;
+        box-sizing: border-box;
     }
 
     h1{
@@ -54,5 +55,32 @@
 
     button:hover{
         background: #006c9e;
+    }
+
+    @media (max-width:792px){
+        #texto{
+            max-width: 545px;
+            min-width: 283px;
+            display: flex;
+            flex-direction: column;
+            grid-row: 1/2;
+            grid-column:1/3;
+            z-index: 3;
+        }
+    }
+
+    @media (max-width:580px){
+        #texto{
+            width: 283px;
+        }
+
+        h1{
+            font-size: 44px;
+            width: 283px;
+        }
+
+        p{
+            max-width:283px;
+        }
     }
 </style>

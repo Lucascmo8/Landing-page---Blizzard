@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img :src="logo" alt="">
+        <img id="logo" :src="logo" alt="">
 
         <nav>
             <details>
@@ -11,20 +11,27 @@
             </details>
 
             <details>
-                <summary>Esportes</summary>
+                <summary>
+                    Esportes
+                </summary>
+                
                 <div>
                     Oi vamosla
                 </div>
+
             </details>
             <a href="#">Loja</a>
             <a href="#">Notícias</a>
             <a href="#">Suporte</a>
         </nav>
 
-        <div id="buttonHeader">
+        <div id="botaoHeader">
             <button id="botaoCriarConta">Criar conta</button>
             <button id="botaoLogarConta">Logar</button>
         </div>
+        <button id="botaoMenuMobile">
+            <img id="imagemMenuMobile" src="../../public/menuMobile.png" alt="">
+        </button>
     </header>
     
 </template>
@@ -46,7 +53,7 @@ im
         border-bottom:1px solid rgba(207, 207, 207, 0.245) ;
     }
 
-    img{
+    #logo{
         width:100px;
         height: 50px;
         justify-self: center;
@@ -61,14 +68,14 @@ im
         gap:34px;
     }
 
-    #buttonHeader{
+    #botaoHeader{
         justify-self: center;
         display: flex;
         align-items: center;
         gap:16px
     }
 
-    button{
+    #botaoHeader>button{
         width: 150px;
         height: 42px;
         padding: 10px 25px;
@@ -89,4 +96,43 @@ im
     button:hover{
         background: #006c9e;
     }
+
+    #botaoMenuMobile{
+        width:30px;
+        height: 30px;
+        background: transparent;
+        border: none;
+        align-self: center;
+        justify-self: end;
+        display: none;
+    }
+
+    #imagemMenuMobile{
+        width:28px;
+        height: 28px;
+    }
+
+    @media (max-width:956px){
+        header{
+            grid-template-columns: 1fr 2fr .2fr;
+        }
+
+        nav{
+            display: none;
+        }
+
+        #botaoMenuMobile{
+            display: block;
+        }
+    }
+
+    @media (max-width:600px){
+        header{
+            grid-template-columns: 1fr 2fr ;
+        }
+
+        #botaoHeader{
+            display: none;
+        }
+    } 
 </style>

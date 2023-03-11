@@ -22,8 +22,8 @@
         </nav>
 
         <div id="buttonHeader">
-            <button>Criar conta</button>
-            <button>Logar</button>
+            <button id="botaoCriarConta">Criar conta</button>
+            <button id="botaoLogarConta">Logar</button>
         </div>
     </header>
     
@@ -65,5 +65,28 @@ im
         justify-self: center;
         display: flex;
         align-items: center;
+        gap:16px
+    }
+
+    button{
+        width: 150px;
+        height: 42px;
+        padding: 10px 25px;
+        font-size: 14px;
+        border-radius:4px ;
+        transition: background .5s ease-in-out
+    }
+
+    #botaoCriarConta{
+        border:2px solid #fff;
+        background: transparent;
+    }
+
+    #botaoLogarConta{
+        background: #00AEFF;
+    }
+
+    button:hover{
+        background: #006c9e;
     }
 </style>

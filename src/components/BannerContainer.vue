@@ -1,8 +1,12 @@
 <template>
     <section class="diablo">
         <HeaderMenu :logo="logoSrc"/>
-        <ListaIconesBanner />
-        <TextoBanner />
+        <div id="itensBanner">
+            <ListaIconesBanner />
+            <TextoBanner />
+            <JogoLogoBanner />
+            <img id="teste" src="../../public/banner-hero/games/diablo-animation.gif" alt="" srcset="">
+        </div>
     </section>
 </template>
 
@@ -10,12 +14,14 @@
     import HeaderMenu from './HeaderMenu.vue';
     import TextoBanner from './TextoBanner.vue';
     import ListaIconesBanner from './ListaIconesBanner.vue';
+    import JogoLogoBanner from './JogoLogoBanner.vue';
     export default{
         name:"BannerContainer",
         components:{
             HeaderMenu,
             TextoBanner,
             ListaIconesBanner,
+            JogoLogoBanner,
         },
         data(){
             return{
@@ -41,5 +47,22 @@
 
     section.wow{
         background-image:url(../../public/banner-hero/games/wow-bg.png) ;
+    }
+
+    div#itensBanner{
+        margin-top:111px;
+
+        display: grid;
+        grid-template-columns: .5fr 2fr 1fr;
+        grid-template-rows:1fr 1fr;
+        align-items: start;
+    }
+    img#teste{
+        width: 280px;
+        height: 158px;
+        grid-row:2;
+        grid-column: 3;
+        align-self: center;
+        justify-self: center;
     }
 </style>

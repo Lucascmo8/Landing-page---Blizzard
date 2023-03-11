@@ -9,13 +9,18 @@
 </template>
 
 <style>
+    ul{
+        width: 50px;
+        list-style: none;
+        justify-self: center;
+        align-self: center;
+    }
+        
+
     img,li{
         width:48px;
         height: 48px;
     }
 
-    ul{
-        width: 50px;
-    }
     
 </style>

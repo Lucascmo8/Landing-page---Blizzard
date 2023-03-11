@@ -18,5 +18,7 @@
     padding: 0;
     box-sizing: border-box;
     color:#fff;
+    font-family: sans-serif;
+    text-decoration: none;
   }
 </style>

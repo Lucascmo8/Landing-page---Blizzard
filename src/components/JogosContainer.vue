@@ -26,8 +26,8 @@
                 <p>{{ jogo.category }}</p>
             </div>
             <div class="cardBlizzard">
-                <img src="../../public/logo-blizzard.png" alt="" id="logoBlizzard">
-                <p><img src="../../public/maisjogos.svg" alt="" id="logoBlizzard"> Ver todos os jogos</p>
+                <img src="../../public/logo-blizzard.png" alt="logo" id="logoBlizzard">
+                <p><img src="../../public/maisjogos.svg"> Ver todos os jogos</p>
             </div>
         </div>
     </section>

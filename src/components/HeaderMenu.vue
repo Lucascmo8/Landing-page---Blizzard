@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img id="logo" :src="logoSrc" alt="Logo Blizzard">
+        <img src="../../public/logo-blizzard.png" alt="logo blizzard" id="logo">
 
         <nav>
             <details>

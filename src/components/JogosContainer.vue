@@ -25,6 +25,10 @@
                 </h3>
                 <p>{{ jogo.category }}</p>
             </div>
+            <div class="cardBlizzard">
+                <img src="../../public/logo-blizzard.png" alt="" id="logoBlizzard">
+                <p><img src="../../public/maisjogos.svg" alt="" id="logoBlizzard"> Ver todos os jogos</p>
+            </div>
         </div>
     </section>
 </template>
@@ -95,11 +99,37 @@
     }
 
     div.cardDoJogo{
-        width: 280px;
         height: auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr .3fr .1fr;
+    }
+
+    div.cardBlizzard,div.cardDoJogo{
+            width: 280px;
+    }
+
+    div.cardBlizzard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+        min-height: 210px;
+        border: 1px solid #212428;
+    }
+
+    div.cardBlizzard > img{
+        width: 90px;
+    }
+
+    div.cardBlizzard > p{
+        vertical-align: bottom;
+    }
+    div.cardBlizzard > p>img{
+        width: 14px;
+        height: 14px;
+        vertical-align: middle;
     }
     img.imagemCard{
         height: 385px;
@@ -132,6 +162,7 @@
 
     div.cardDoJogo:hover>.imagemCard{
         transform: scale(1.05);
+        box-shadow: 0px 0px 4px #fff;
     }
 
 
@@ -146,8 +177,8 @@
             gap:28px;
         }
         
-        div.cardDoJogo{
-            width:200px
+        div.cardBlizzard,div.cardDoJogo{
+            width: 200px;
         }
 
         div.cardDoJogo h3{
@@ -158,11 +189,16 @@
             height: 280px;
             width: 200px;
         }
+
+        div.cardDoJogo:hover>.imagemCard{
+            transform: scale(1.04);
+        }
         img.logoCard{
             width: 108px;
             height: 70px;
             margin-bottom: -110px;
         }
+
     }
 
     @media (max-width:720px){
@@ -180,9 +216,24 @@
         }
 
         div.cardDoJogo{
-            width: 160px;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
+        }
+
+        div.cardBlizzard,div.cardDoJogo{
+            width: 160px;
+        }
+
+        div.cardBlizzard > img{
+            width: 70px;
+        }
+
+        div.cardBlizzard > p >img{
+        display: none;
+    }
+
+        div.cardBlizzard > p{
+            font-size: 14px;
         }
 
         div.cardDoJogo h3, div.cardDoJogo p{

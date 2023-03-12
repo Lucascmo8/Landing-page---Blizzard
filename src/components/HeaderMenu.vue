@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img id="logo" :src="logo" alt="">
+        <img id="logo" :src="logoSrc" alt="Logo Blizzard">
 
         <nav>
             <details>
@@ -39,8 +39,11 @@ im
 <script>
     export default{
         name:"HeaderMenu",
-        props:['logo'],
-        
+        data(){
+            return{
+                logoSrc:"../../public/logo-blizzard.png",
+            }
+        }
     }
 </script>
 

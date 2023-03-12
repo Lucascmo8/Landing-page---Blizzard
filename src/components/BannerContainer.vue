@@ -25,11 +25,7 @@
             JogoLogoBanner,
             gifJogo,
         },
-        data(){
-            return{
-                logoSrc:"../../public/logo-blizzard.png",
-            }
-        }
+        
     }
 </script>
 

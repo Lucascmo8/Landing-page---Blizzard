@@ -1,13 +1,16 @@
 <template>
   <BannerContainer />
+  <JogosContainer />
   
 </template>
 
 <script>
   import BannerContainer from './components/BannerContainer.vue';
+  import JogosContainer from './components/JogosContainer.vue';
   export default{
       components:{
-        BannerContainer
+        BannerContainer,
+        JogosContainer,
       }
   }
 </script>

@@ -5,7 +5,7 @@
             <h4>Baixe agora o battle.net</h4>
             <ul>
                 <li><img src="../../public/Group.svg" alt="">  Seus jogos em um só lugar</li>
-                <li><img src="../../public/Group (1).svg" alt="">  Conecte-se aos seus amigos</li>
+                <li><img src="../../public/Group1.svg" alt="">  Conecte-se aos seus amigos</li>
                 <li><img src="../../public/buyLogo.png" alt="">  Compre jogos e itens digitais</li>
             </ul>
             <button>

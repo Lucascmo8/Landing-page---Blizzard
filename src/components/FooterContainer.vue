@@ -18,14 +18,27 @@
                 </p>
             </div>
         </div>
+        <ImagensBattleNet />
     </footer>
 </template>
+
+<script>
+    import ImagensBattleNet from './ImagensBattleNet.vue';
+    export default{
+        name:"FooterContainer",
+        components:{
+            ImagensBattleNet,
+        }
+    }
+</script>
 
 <style scoped>
     footer{
         background: url(../../public/footer-background.png);
         height: auto;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     #textoFooter{
@@ -103,5 +116,11 @@
     #textoAplicativo a{
         color: #E5E5E5;
         text-decoration: underline;
+    }
+
+    @media (max-width:820px){
+        footer{
+            flex-direction: column;
+        }
     }
 </style>

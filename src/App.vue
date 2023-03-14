@@ -26,5 +26,6 @@
     font-family: sans-serif;
     text-decoration: none;
     list-style: none;
+    border: none;
   }
 </style>

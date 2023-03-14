@@ -1,11 +1,11 @@
 <template>
-    <section class="diablo">
+    <section id="bannerContainer" :class="escolhido">
         <HeaderMenu :logo="logoSrc"/>
         <div id="itensBanner">
-            <ListaIconesBanner />
-            <TextoBanner />
+            <ListaIconesBanner @jogo-escolhido="jogoEscolhido"/>
+            <TextoBanner :jogo="escolhido"/>
             <JogoLogoBanner />
-            <gifJogo />
+            <gifJogo :jogo="escolhido"/>
         </div>
     </section>
 </template>
@@ -16,6 +16,7 @@
     import ListaIconesBanner from './ListaIconesBanner.vue';
     import JogoLogoBanner from './JogoLogoBanner.vue';
     import gifJogo from './gifJogo.vue';
+
     export default{
         name:"BannerContainer",
         components:{
@@ -25,6 +26,16 @@
             JogoLogoBanner,
             gifJogo,
         },
+        data() {
+            return {
+                escolhido:"diablo"
+            }
+        },
+        methods:{
+            jogoEscolhido(jogo){
+                this.escolhido = jogo
+            }
+        }
         
     }
 </script>

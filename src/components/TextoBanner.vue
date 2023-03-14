@@ -1,10 +1,10 @@
 <template>
     <div id="texto">
         <h1>
-            Retorne à escuridão com o game Diablo IV
+            {{ titulo }}
         </h1>
         <p>
-            O retorno de Lilith traz uma era de escuridão e sofrimento
+            {{ texto }}
         </p>
         <button>
             Jogue agora
@@ -15,6 +15,41 @@
 <script>
     export default{
         name:"TextoBanner",
+        props:{
+            jogo:{
+                type:String,
+                required:true
+            }
+        }
+        ,
+        data() {
+            return {
+                titulo: 'Retorne à escuridão com o game Diablo IV',
+                texto: 'O retorno de Lilith traz uma era de escuridão e sofrimento'
+            }
+        },
+        watch:{
+            jogo: function(){
+                this.mudarTextos()
+            }
+        },
+        methods:{
+            mudarTextos(){
+                if(this.jogo == "diablo"){
+                    this.titulo= 'Retorne à escuridão com o game Diablo IV'
+                    this.texto= 'O retorno de Lilith traz uma era de escuridão e sofrimento'
+                }else if(this.jogo == "wow"){
+                    this.titulo= 'Desbrave as Terras Sombrias em Shadowlands! '
+                    this.texto= 'O que jaz além do mundo que você conhece?'
+                }else{
+                    this.titulo= 'Novo pacote de expansão de Hearthstone'
+                    this.texto= 'A Horda e a Aliança se encontraram no Vale Alterac para lutar'
+                }
+            }
+        },
+        mounted(){
+            this.mudarTextos()
+        }
     }
 </script>
 
@@ -45,7 +80,7 @@
         padding: 14px 32px;
         margin-top: 32px;
 
-        width: 168px;
+        width: 178px;
         height: 52px;
 
         background: #00AEFF;

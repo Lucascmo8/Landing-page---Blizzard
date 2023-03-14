@@ -1,14 +1,47 @@
 <template>
     <ul>
-        <li><img src="../../public/banner-hero/icons/game-1.png" alt=""></li>
-        <li><img src="../../public/banner-hero/icons/game-2.png" alt=""></li>
-        <li><img src="../../public/banner-hero/icons/game-3.png" alt=""></li>
+        <li>
+            <input type="radio" id="diablo" value="diablo" name="diablo" v-model="jogoEscolhido" @change="mostrarImagemBanner('diablo')">
+            <label for="diablo"><img ref="opcao" class="none" data-jogos="diablo" src="../../public/banner-hero/icons/game-1.png" alt=""></label>
+        </li>
+
+        <li>
+            <input type="radio" id="heartStone" value="heartStone" v-model="jogoEscolhido" @change="mostrarImagemBanner('heartStone')">
+            <label for="heartStone"><img ref="opcao" class="none" data-jogos="heartStone"  src="../../public/banner-hero/icons/game-2.png" alt=""></label>
+        </li>
+
+        <li>
+            <input type="radio" id="wow" value="wow" v-model="jogoEscolhido" @change="mostrarImagemBanner('wow')">
+            <label for="wow"><img ref="opcao" class="none"  data-jogos="wow" src="../../public/banner-hero/icons/game-3.png" alt=""></label>
+        </li>
+
         <li><img class="none" src="../../public/banner-hero/icons/game-4.png" alt=""></li>
         <li><img class="none" src="../../public/banner-hero/icons/game-5.png" alt=""></li>
     </ul>
 </template>
 
-<style>
+<script>
+    export default{
+        name:"ListaIconesBanner",
+        data(){
+            return{
+                jogoEscolhido:"diablo"
+            }
+        },
+        methods:{
+            mostrarImagemBanner(event){
+                console.log(event)
+                this.jogoEscolhido = event;
+                this.$emit("jogo-escolhido", this.jogoEscolhido)
+            }
+        },
+        mounted(){
+            console.log(this.$refs.opcao)
+        }
+    }
+</script>
+
+<style scoped>
     ul{
         width: 50px;
         list-style: none;
@@ -22,10 +55,17 @@
         gap: 20px;
     }   
         
+    input{
+        display: none;
+    }
 
-    img,li{
+    img,li,label{
         width:48px;
         height: 48px;
+    }
+
+    input:checked + label>img{
+        filter: grayscale(0);
     }
 
     img.none{

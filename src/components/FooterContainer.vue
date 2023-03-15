@@ -9,7 +9,7 @@
                 <li><img src="../../public/buyLogo.png" alt="">  Compre jogos e itens digitais</li>
             </ul>
             <button>
-                Baixar para o MacOS
+                Baixar para o {{ dispositivoDoUsuario }}
             </button>
             <div id="textoAplicativo">
                 <img src="../../public/celular.svg" alt=""> 
@@ -26,8 +26,30 @@
     import ImagensBattleNet from './ImagensBattleNet.vue';
     export default{
         name:"FooterContainer",
+        data(){
+            return{
+                dispositivoDoUsuario:"Windows"
+            }
+        },
         components:{
             ImagensBattleNet,
+        },
+        methods:{
+            veificarDispositivos(){
+                const dispositivo = navigator.userAgent || navigator.vendor || window.opera
+                if( dispositivo.match( /iPad/i ) || dispositivo.match( /iPhone/i ) || dispositivo.match( /iPod/i ) || dispositivo.match( "Mac" ) ){
+                        this.dispositivoDoUsuario = "MacOS"
+                }else if(dispositivo.match( "Linux" )){
+                    this.dispositivoDoUsuario = "Linux"
+                    
+                }else{
+                    this.this.dispositivoDoUsuario = "Windowns"
+                }
+            }
+        }
+        ,
+        mounted(){
+           this.veificarDispositivos()
         }
     }
 </script>
@@ -39,6 +61,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding: 100px;
     }
 
     #textoFooter{
@@ -121,6 +144,7 @@
     @media (max-width:820px){
         footer{
             flex-direction: column;
+            padding:48px;
         }
     }
 </style>

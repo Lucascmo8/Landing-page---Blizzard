@@ -167,7 +167,7 @@
 
 
 
-    @media (max-width:1220px){
+    @media (max-width:1460px){
         section{
             padding:50px;
         }

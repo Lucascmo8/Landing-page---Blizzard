@@ -36,7 +36,6 @@
                 this.escolhido = jogo
             }
         }
-        
     }
 </script>
 
@@ -49,14 +48,17 @@
     }
     section.diablo{
         background-image:url(../../public/banner-hero/games/diablo-bg.png) ;
+        /* background-position: center 40%; */
     }
 
     section.heartStone{
         background-image:url(../../public/banner-hero/games/hearthstone-bg.png) ;
+        background-position: 65% center;
     }
 
     section.wow{
         background-image:url(../../public/banner-hero/games/wow-bg.png) ;
+        background-position: 70% center;
     }
 
     div#itensBanner{

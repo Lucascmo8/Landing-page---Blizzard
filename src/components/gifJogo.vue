@@ -61,16 +61,7 @@
         object-position: 100px;
     }
 
-    @media (max-width:792px){
-        div#gifContainer{
-            position: absolute;
-            align-self: end;
-            justify-self: end;
-            margin-bottom: 40px;
-        }   
-    }
-
-    @media (max-width:675px){
+    @media (max-width:1020px){
         div#gifContainer{
             display: none;
         }

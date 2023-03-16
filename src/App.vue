@@ -28,4 +28,13 @@
     list-style: none;
     border: none;
   }
+
+  button:hover{
+    cursor:pointer;
+  }
+
+  button.btnHeader{
+        background: transparent;
+        border: none;
+  }
 </style>

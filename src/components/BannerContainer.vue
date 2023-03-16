@@ -48,7 +48,6 @@
     }
     section.diablo{
         background-image:url(../../public/banner-hero/games/diablo-bg.png) ;
-        /* background-position: center 40%; */
     }
 
     section.heartStone{

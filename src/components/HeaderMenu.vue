@@ -3,23 +3,10 @@
         <img src="../../public/logo-blizzard.png" alt="logo blizzard" id="logo">
 
         <nav>
-            <details>
-                <summary>Jogos</summary>
-                <div>
-                    Oi vamosla
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    Esportes
-                </summary>
-                
-                <div>
-                    Oi vamosla
-                </div>
-
-            </details>
+            <DropdownJogos />
+            <button class="btnHeader">
+                Esportes
+            </button>
             <a href="#">Loja</a>
             <a href="#">Notícias</a>
             <a href="#">Suporte</a>
@@ -37,12 +24,16 @@
 </template>
 im
 <script>
+    import DropdownJogos from './DropdownJogos.vue';
     export default{
         name:"HeaderMenu",
         data(){
             return{
                 logoSrc:"../../public/logo-blizzard.png",
             }
+        },
+        components:{
+            DropdownJogos,
         }
     }
 </script>

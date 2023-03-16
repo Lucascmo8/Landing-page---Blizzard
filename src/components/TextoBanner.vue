@@ -116,6 +116,7 @@
 
         p{
             max-width:283px;
+            font-size: 16px;
         }
     }
 </style>

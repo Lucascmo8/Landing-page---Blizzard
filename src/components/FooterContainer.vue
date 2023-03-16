@@ -146,5 +146,18 @@
             flex-direction: column;
             padding:48px;
         }
+
+        button{
+        padding: 14px 32px;
+
+        width: 200px;
+        height: 52px;
+
+        background: #00AEFF;
+        border-radius: 4px;
+
+        font-weight: 600;
+        font-size: 16px;
+    }
     }
 </style>

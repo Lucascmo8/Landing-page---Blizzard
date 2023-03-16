@@ -77,7 +77,6 @@
     @media (max-width:792px){
         div#itensBanner{
             margin-top:90px;
-
             grid-template-columns:2fr .5fr;
             grid-template-rows:2fr 1fr;
             align-items: start;
@@ -86,6 +85,7 @@
 
     @media (max-width:475px){
         div#itensBanner{
+            padding: 0 15px;
             grid-template-columns:1fr;
             grid-template-rows:2fr 1fr;
             align-items: start;

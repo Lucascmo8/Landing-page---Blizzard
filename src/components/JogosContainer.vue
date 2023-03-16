@@ -76,7 +76,8 @@
 
     div#headerJogos p{
         font-size: 14px;
-        width: 120px;
+        max-width: 120px;
+        text-align: end;
     }
 
     ul#listaDePlataformas{
@@ -229,8 +230,8 @@
         }
 
         div.cardBlizzard > p >img{
-        display: none;
-    }
+            display: none;
+        }
 
         div.cardBlizzard > p{
             font-size: 14px;
@@ -253,6 +254,30 @@
             justify-self: center;
             grid-row:2;
             margin-bottom:16px;
+        }
+    }
+
+    @media (max-width:430px){
+        section,#headerJogos{
+            padding:10px;
+        }
+        #todosOsJogos{
+            grid-template-columns: 1fr;
+            gap:24px;
+        }
+
+        div.cardBlizzard,div.cardDoJogo{
+            width: 200px;
+        }
+
+        img.imagemCard{
+            height: 280px;
+            width: 200px;
+        }
+
+        img.logoCard{
+            width: 108px;
+            height: 70px;
         }
     }
 </style>
